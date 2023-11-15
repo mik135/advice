@@ -1,0 +1,95 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+
+
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+
+    --fsQuote: 28px;
+    --fw: 800;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--darkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow:  hidden;
+}
+
+.adviceContainer {
+    background-color: var(--darkGrayishBlue);
+    width: 500px;
+    padding: 2rem 2rem 4rem 2rem;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: pointer;
+    flex-shrink: 1;
+}
+
+.adviceContainer h2 {
+    color: var(--lightCyan);
+    font-size: var(--fsQuote);
+    font-weight: var(--fw)
+}
+
+.adviceContainer h4 {
+    color: var(--neonGreen);
+    font-weight: 700;
+}
+
+.id {
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+
+.mobile{
+    display: none
+}
+
+.dice {
+    position: absolute;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--neonGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-52%, 0);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 10px var(--neonGreen), 0 0 40px var(--neonGreen), 0 0 80px var(--neonGreen);
+    }
+}
+
+@media screen and (max-width: 530px) {
+    body {
+        padding: 20px;
+    }
+    .adviceContainer {
+        padding: 2rem 1rem 4rem 1rem;
+        width: 330px;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
